@@ -1,0 +1,58 @@
+.item {
+    width: 15%;
+    margin: 3%;
+    padding: 5px;
+    float: left;
+}
+img {
+    width: 100%;
+}
+.description {
+    display: none;
+}
+.item:hover .description {
+    display: block;
+}
+
+.item:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.imgBox {
+    display: none;
+}
+.imgBox:checked + label img{
+    position: fixed;
+    width: auto;
+    left: 50%;
+    top: 50%;
+}
+.imgBox:checked + label .close{
+    display: block;
+}
+
+
+
+.close {
+    display: none;
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+}
+
+.close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #888;
+}
+.close:before {
+    transform: rotate(45deg);
+}
+.close:after {
+    transform: rotate(-45deg);
+}
