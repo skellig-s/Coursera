@@ -1,0 +1,105 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+.menu {
+    text-align: center;
+
+}
+.card {
+    width: 300px;
+    margin: 30px;
+    display: inline-block;
+    text-align: left;
+}
+.name {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+.description {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.name a {
+    font-weight: bold;
+}
+
+.pic {
+    max-width: 300px;
+}
+.cost:after, .old-cost:after {
+    content: " ₽";
+}
+.old-cost {
+    text-decoration: line-through;
+}
+.item{
+    list-style:none;
+}
+.card:hover .name a {
+    color:red;
+}
+.card:hover .pic {
+    opacity: 0.7;
+}
+.rate {
+    display: inline-block;
+    border: 0;
+}
+/* Hide radio */
+.rate > input {
+    display: none;
+}
+.rate > label {
+    float: right;
+}
+/* The star of the show */
+.rate > label:before {
+    display: inline-block;
+    font-size: 1.1rem;
+    padding: .3rem .2rem;
+    margin: 0;
+    cursor: pointer;
+    font-family: FontAwesome;
+    content: "\f005 "; /* full star */
+}
+.rate > label:last-child:before {
+    content: "\f006 "; /* empty star outline */
+}
+.rate .half:before {
+    content: "\f089 "; /* half star no outline */
+    position: absolute;
+    padding-right: 0;
+}
+/* Click + hover color */
+input:checked ~ label, /* color current and previous stars on checked */
+label:hover, label:hover ~ label { color: #73B100;  } /* color previous stars on hover */
+
+/* Hover highlights */
+input:checked ~ label:hover, /* highlight current and previous stars */
+input:checked ~ label:hover ~ label, /* highlight previous selected stars for new rating */
+label:hover ~ input:checked ~ label /* highlight previous selected stars */ { color: #A6E72D;  }
+
+input#row_radio:checked ~ .card {
+    display: block;
+    width: auto;
+    margin-left: 5%;
+}
+input#row_radio:checked ~ .card div {
+    display: inline-block;
+}
+
+input#row_radio:checked ~ .card .details {
+    vertical-align: top;
+    margin-left: 5%;
+    width: 20%;
+}
+input#row_radio:checked ~ .card .description {
+    vertical-align: top;
+    margin-left: 5%;
+    width: 20%;
+}
+#notColored {
+    color: black;
+}
