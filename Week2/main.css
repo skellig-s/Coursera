@@ -1,122 +1,69 @@
+
 .menu
 {
     position: absolute;
-    width: 99%;
-    margin: 0;
+    top:20%;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-left: 10%;
+    width: 80%;
     padding: 0;
-    z-index: 5;
+}
+
+#first
+{
+    transform: translate(-220%);
+}
+#second
+{
+    transform: translate(-110%);
+}
+#third
+{
+    transform: translate(-0%);
+}
+#fourth
+{
+    transform: translate(110%);
+}
+#fifth
+{
+    transform: translate(220%);
 }
 .slider
 {
     position: absolute;
     top: 70%;
     left: 50%;
-}
-#first
-{
-    transform: translate(-330%);
-    z-index: -2;
-}
-#second
-{
-    transform: translate(-220%);
-    z-index: -2;
-}
-#third
-{
-    transform: translate(-110%);
-    z-index: -2;
-}
-#fourth
-{
-    transform: translate(0%);
-    z-index: -2;
-}
-#fifth
-{
-    transform: translate(110%);
-    z-index: -2;
-}
-#sixth
-{
-    transform: translate(220%);
-    z-index: -2;
+    z-index: -5;
 }
 .item {
-    width: 15%;
-    min-width: 100px;
+    width: 18%;
+    min-width: 50px;
     max-width: 20%;
-    margin: 3%;
-    padding: 15px;
-    float: left;
+    margin: 2%;
+    padding: 1%;
+    white-space: normal;
+    display: inline-block;
+    vertical-align: top;
+}
+.description {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+}
+.item:hover .description {
+    height: auto;
+    cursor: pointer;
 }
 
-#first:checked ~ .menu .item
-{
-    left: 0%;
-    transition-property: left;
-    transition-duration: 1s;
-
-    z-index: 1;
-}
-#second:checked ~ .menu .item
-{
-    left: -73%;
-    transition-property: left;
-    transition-duration: 1s;
-    z-index: 1;
-}
-#second:checked ~ .menu .item {
-    background-color: red;
-    left: -73%;
-}
-#third:checked ~ .menu .item
-{
-    left: -146%;
-    transition-property: left;
-    transition-duration: 1s;
-    z-index: 1;
-}
-#fourth:checked ~ .menu .item
-{
-    left: -219%;
-    transition-property: left;
-    transition-duration: 1s;
-
-    z-index: 1;
-}
-#fifth:checked ~ .menu .item
-{
-    left: -292%;
-    transition-property: left;
-    transition-duration: 1s;
-    z-index: 1;
-}
-#sixth:checked ~ .menu .item
-{
-    left: -365%;
-    transition-property: left;
-    transition-duration: 1s;
-    z-index: 1;
-}
 
 img {
     max-width: 100%;
 }
-.description {
-    display: none;
-}
 
-.item:hover .description {
-    display: block;
-}
 
 .item:hover img {
-    cursor: pointer;
-}
-
-.item:hover .description {
-    display: block;
     cursor: pointer;
 }
 
@@ -169,3 +116,38 @@ img {
 .imgBox:checked ~ .close{
     display: block;
 }
+
+#first:checked ~ .menu .item {
+    display: inline-block;
+}
+#second:checked ~ .menu .item {
+    transition: opacity 1s ease-out;
+    display: none;
+}
+#second:checked ~ .menu .item:nth-of-type(n+4) {
+    display: inline-block;
+}
+#third:checked ~ .menu .item {
+    transition: opacity 1s ease-out;
+    display: none;
+}
+#third:checked ~ .menu .item:nth-of-type(n+7) {
+    display: inline-block;
+}
+
+#fourth:checked ~ .menu .item {
+    transition: opacity 1s ease-out;
+    display: none;
+}
+#fourth:checked ~ .menu .item:nth-of-type(n+10) {
+    display: inline-block;
+}
+
+#fifth:checked ~ .menu .item {
+    transition: opacity 1s ease-out;
+    display: none;
+}
+#fifth:checked ~ .menu .item:nth-of-type(n+13) {
+    display: inline-block;
+}
+
