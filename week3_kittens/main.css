@@ -1,0 +1,23 @@
+.wrapper {
+    display: flex;
+
+}
+.menu {
+    display: flex;
+    flex-direction: column;
+    background-color: #CCCCCC;
+
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+
+}
+.cat {
+    width: 20%;
+}
+.cat img {
+    width: 100%;
+}
