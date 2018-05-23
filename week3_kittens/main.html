@@ -8,14 +8,18 @@
 <body>
 <div class="content-box">
     <div class="wrapper">
+        <input type="radio" id="ab-cat" class="kindInputBoxes" name="kindInputBoxes">
+        <input type="radio" id="br-cat" class="kindInputBoxes" name="kindInputBoxes">
+        <input type="radio" id="rg-cat" class="kindInputBoxes" name="kindInputBoxes">
+        <input type="radio" id="si-cat" class="kindInputBoxes" name="kindInputBoxes">
         <section class="menu">
-            <span class="kind">Абиссинская</span><hr>
-            <span class="kind">Британская</span><hr>
-            <span class="kind">Русская голубая</span><hr>
-            <span class="kind">Сиамская</span><hr>
+            <label class="kind" for="ab-cat">Абиссинская</label><hr>
+            <label class="kind" for="br-cat">Британская</label><hr>
+            <label class="kind" for="rg-cat">Русская голубая</label><hr>
+            <label class="kind" for="si-cat">Сиамская</label><hr>
         </section>
         <section class="gallery">
-            <div class="cat" data-catInfo="Васька, 2 года">
+            <div class="cat" data-catInfo="Васька, 2 года" data-catKind="Британская">
                 <img src="img/1.jpg">
             </div>
             <div class="cat" data-catInfo="Мурзик, 3 года">
@@ -24,22 +28,22 @@
             <div class="cat" data-catInfo="Мурзик, 3 года">
                 <img src="img/4.jpg">
             </div>
-            <div class="cat" data-catInfo="Мурзик, 3 года">
+            <div class="cat" data-catInfo="Мурзик, 3 года" data-catKind="Сиамская">
                 <img src="img/5.jpg">
             </div>
-            <div class="cat" data-catInfo="Мурзик, 3 года">
+            <div class="cat" data-catInfo="Мурзик, 3 года" data-catKind="Русская голубая">
                 <img src="img/6.jpg">
             </div>
-            <div class="cat" data-catInfo="Мурзик, 3 года">
+            <div class="cat" data-catInfo="Мурзик, 3 года" data-catKind="Британская">
                 <img src="img/2.jpg">
             </div>
-            <div class="cat" data-catInfo="Мурзик, 3 года">
+            <div class="cat" data-catInfo="Мурзик, 3 года" data-catKind="Британская">
                 <img src="img/7.jpg">
             </div>
             <div class="cat" data-catInfo="Мурзик, 3 года">
                 <img src="img/8.jpg">
             </div>
-            <div class="cat" data-catInfo="Мурзик, 3 года">
+            <div class="cat" data-catInfo="Мурзик, 3 года" data-catKind="Абиссинская">
                 <img src="img/9.jpg">
             </div>
 
@@ -47,13 +51,12 @@
 
         <section class="rating">
             <div class="rating-title">РЕЙТИНГ</div>
-            <label for="rate-checkbox">по убыванию</label>
             <input type="checkbox" id="rate-checkbox" name="check">
             <div class="rates">
-                <div class="rating-name" data-catRate="10">Абиссинская</div>
-                <div class="rating-name" data-catRate="9">Британская</div>
-                <div class="rating-name" data-catRate="8">Русская голубая</div>
-                <div class="rating-name" data-catRate="4">Сиамская</div>
+                <div class="rating-name" data-catRate="8" data-catKind="Русская голубая"></div>
+                <div class="rating-name" data-catRate="4" data-catKind="Сиамская"></div>
+                <div class="rating-name" data-catRate="9" data-catKind="Британская"></div>
+                <div class="rating-name" data-catRate="10" data-catKind="Абиссинская"></div>
             </div>
         </section>
     </div>
