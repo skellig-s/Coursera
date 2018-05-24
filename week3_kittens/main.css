@@ -1,8 +1,12 @@
 body {
     background-color: #DDDDDD;
 }
+.page-title {
+    font-size: 40px;
+    text-align: center;
+    margin: 4%;
+}
 .content-box {
-    align-content: center;
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
@@ -50,6 +54,7 @@ hr {
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: center;
+    flex-grow: 3;
 
 }
 .cat {
@@ -71,6 +76,7 @@ hr {
 }
 
 .rates {
+    width: 90%;
     display: flex;
     flex-direction: column-reverse;
 }
@@ -78,33 +84,38 @@ hr {
     display: flex;
     align-self: flex-start;
     flex-direction: column;
-    width: 25%;
     background: #CCCCCC;
     white-space: nowrap;
     padding: 1%;
     margin: 0 1%;
 }
 .rating-name::before {
-    font-size: 20px;
+    font-size: 16px;
+    float: left;
+    position: relative;
+    top: -22px;
     content: attr(data-catKind);
 }
+.rating-name::after {
+    float: right;
+    position: relative;
+    right: -35%;
+    top: -18px;
+    font-size: 18px;
+    content: attr(data-catRate);
+}
 .rating-name {
-
-    background: linear-gradient(to right, red , white);
-    margin: 2%;
-    width: 30%;
+    width: 80%;
+    height: 20px;
+    background: linear-gradient(to right, red, white 30%, transparent 30%, transparent);
+    margin: 25% 5% 15% 2%;
 }
 .rating-name[data-catRate='9'], .rating-name[data-catRate='10'] {
     background: linear-gradient(to right, limegreen , white);
-    width: 100%;
 }
 .rating-name[data-catRate='8'], .rating-name[data-catRate='7'],
 .rating-name[data-catRate='6'], .rating-name[data-catRate='5'] {
-    background: linear-gradient(to right, yellow , white);
-    width: 60%;
-}
-.rating-name {
-    order: 0;
+    background: linear-gradient(to right, yellow, white 60%, transparent 60%, transparent);
 }
 
 #rate-checkbox::after {
@@ -112,6 +123,10 @@ hr {
     left: 15px;
     bottom: 2px;
     content: 'по убыванию';
+}
+
+.rating-name {
+    order: 0;
 }
 #rate-checkbox:checked ~ .rates .rating-name[data-catRate='10'] {
     order: 10;
@@ -121,6 +136,27 @@ hr {
 }
 #rate-checkbox:checked ~ .rates .rating-name[data-catRate='8'] {
     order: 8;
+}
+#rate-checkbox:checked ~ .rates .rating-name[data-catRate='7'] {
+    order: 7;
+}
+#rate-checkbox:checked ~ .rates .rating-name[data-catRate='6'] {
+    order: 6;
+}
+#rate-checkbox:checked ~ .rates .rating-name[data-catRate='5'] {
+    order: 5;
+}
+#rate-checkbox:checked ~ .rates .rating-name[data-catRate='4'] {
+    order: 4;
+}
+#rate-checkbox:checked ~ .rates .rating-name[data-catRate='3'] {
+    order: 3;
+}
+#rate-checkbox:checked ~ .rates .rating-name[data-catRate='2'] {
+    order: 2;
+}
+#rate-checkbox:checked ~ .rates .rating-name[data-catRate='1'] {
+    order: 1;
 }
 
 .cat:nth-of-type(8n) {
@@ -149,4 +185,9 @@ hr {
 }
 .cat img {
     width: 100%;
+}
+
+.footer {
+    margin-top: 3%;
+    float: bottom;
 }
