@@ -45,7 +45,7 @@ body {
     background-color: rgba(41, 54, 60, .7);
 
 }
-.video::after {
+.video-text {
     position: absolute;
     left: 172px;
     bottom: 325px;
